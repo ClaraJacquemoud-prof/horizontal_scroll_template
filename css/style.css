@@ -1,0 +1,64 @@
+:root {
+  --margeDeLaPage: 100px;
+  --couleurTitre :beige;
+  --couleurDuTexte : beige;
+}
+
+html{
+ height: 100vh;
+ overflow-y: hidden;
+ display: flex;
+ background-color: rgb(5, 5, 8);
+ color: var(--couleurDuTexte);
+}
+
+*{
+	box-sizing: border-box;
+}
+
+header,footer{
+	width: 500px;
+}
+
+h1,h2{
+	color: var(--couleurTitre);
+	font-size: 40px;
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+body{
+	display: flex;
+	height: 100%;
+	padding: var(--margeDeLaPage);
+	position: relative;
+}
+
+body>*{
+	margin-right: 50px;
+}
+
+.galerie_horizontale{
+	  width: auto;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.galerie_horizontale>*{
+	  width: auto;
+  height: 30%;
+  position: relative;
+}
+
+.fullPage{
+	height: 100vh;
+	position: relative;
+	top: calc( var(--margeDeLaPage)* -1 );
+}
+
+
+
+/* canvas{display: none;} */

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- empêcher le référencement -->
+<meta name="robots" content="noindex, nofollow, noarchive" />
+
+<title>P5js intro</title>
+
+<!-- pour les mobiles -->
+<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1.0" />
+
+<!-- style -->
+ <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/p5.min.js"></script>
+<script type="text/javascript" src="js/curseur.js"></script>
+<!-- <script type="text/javascript" src="js/test_glitch.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/p5.glitch@latest/p5.glitch.js"></script>
+</head>
+<body class="scroll-container">
+	<header>
+    <h1>Le titre de la page</h1>
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in ornare felis. Vivamus magna ligula, ultrices in augue sit amet, egestas tempor mi. Cras sed nisi vehicula, consequat lectus vulputate, lacinia lectus. Fusce faucibus dolor id libero ultrices, id volutpat risus bibendum. Maecenas massa eros, tincidunt ut dolor ac, placerat porta neque. Duis quis ligula nibh. Nam eros lacus, molestie id nibh ac, luctus venenatis urna. Nulla vel odio vel nisl suscipit pharetra eu eget lectus. Mauris consequat auctor massa eu rhoncus. Curabitur a tempor massa, et finibus eros. Donec non elementum elit, nec pellentesque mauris. Suspendisse sit amet semper felis, in gravida diam. Donec sagittis ultrices iaculis.
+
+Proin erat ex, scelerisque et eros ut, suscipit semper sapien. Aliquam finibus quam euismod elit pretium, vitae pretium est volutpat. Morbi elementum, elit sit amet dapibus faucibus, purus eros molestie justo, quis pellentesque libero ipsum vitae mauris. Sed aliquet mollis mauris eget ultrices. Sed in diam eu arcu iaculis venenatis vel sit amet nulla. Integer feugiat molestie viverra. Pellentesque molestie justo sed tellus feugiat mattis. Fusce hendrerit at orci nec bibendum. Aliquam pulvinar tempor massa, non venenatis nisl. Praesent volutpat vel tellus id ultrices. Donec lectus sem, malesuada sit amet nisl at, facilisis malesuada dolor. In at ante commodo, condimentum eros sed, fermentum neque. Nam ultrices euismod venenatis. Praesent commodo mi vitae neque tristique, non vehicula quam luctus.
+
+Aliquam eu porta erat, id ullamcorper urna. Donec feugiat dui in massa pharetra, a dictum lorem euismod. Aenean at facilisis enim. Suspendisse dapibus diam facilisis, egestas urna vitae, rutrum libero. Suspendisse sit amet ex imperdiet, suscipit leo in, consequat lorem. Ut sagittis erat eget facilisis rhoncus. Curabitur facilisis tristique arcu. Nullam rutrum pellentesque lectus nec vulputate. Duis auctor eget turpis et rutrum. Vivamus consectetur, nulla eu iaculis ullamcorper, magna ipsum condimentum ante, id porta est velit sit amet augue. Praesent tincidunt arcu eget tincidunt accumsan. Curabitur convallis orci diam, ut lobortis diam cursus at. </p>
+  </header>
+    <video class="hoverPlay" src="img/Enregistrement de l'écran 2025-08-19 155851.mp4" autoplay="true" muted loop></video>
+     <video class="fullPage" src="img/Enregistrement de l'écran 2025-08-19 160928.mp4"  autoplay="true" muted loop></video>
+       <video src="img/Enregistrement de l'écran 2025-08-20 120007.mp4" autoplay="true" muted loop></video>
+
+       <div class="galerie_horizontale">
+        <img src="img/Capture d'écran 2025-08-19 152542.png" alt="">
+        <img src="img/Capture d'écran 2025-08-19 152637.png" alt="">
+        <img src="img/Capture d'écran 2025-08-19 153829.png" alt="">
+       </div>
+       <video src="img/Enregistrement de l'écran 2025-08-20 121005.mp4" autoplay="true" muted loop></video>
+       <video class="hoverPlay fullPage" src="img/Enregistrement de l'écran 2025-08-20 173200.mp4" autoplay="true" muted loop></video>
+
+       <footer>
+        <h2>sources :</h2>
+       <p>
+        source 1 : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br>
+        source2 : xxxxxxxxxxxxxxxxxxxx
+       </p>
+       </footer>
+</body>
+</html>
+<script>
+const container = document.querySelector('html');
+document.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    container.scrollLeft += e.deltaY;
+}, { passive: false });
+
+const video = document.querySelectorAll('.hoverPlay');
+video.forEach((v) => {
+  v.addEventListener('mouseenter', () => {
+  v.play();
+});
+v.addEventListener('mouseleave', () => {
+  v.pause();
+  v.currentTime = 0; // revient au début
+});
+})
+
+</script>
