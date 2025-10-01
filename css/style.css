@@ -1,14 +1,30 @@
 :root {
+	/* marges : */
   --margeDeLaPage: 100px;
+  --espaceEntreLesBlocs : 50px;
+
+  /* couleurs */
   --couleurTitre :beige;
   --couleurDuTexte : beige;
+  --couleurFond : rgb(5, 5, 8);
+
+  /* dimension des blocs */
+  --largeurPremierBloc : 500px;
+  --largeurAside : 250px;
+
+
+  /* taille des textes :  */
+  --fontsizeGlobal : 16px;
+  --fontSizeH1 : 40px;
+  --fontSizeH2 : 40px;
 }
 
 html{
+	font-size: var(--fontsizeGlobal);
  height: 100vh;
  overflow-y: hidden;
  display: flex;
- background-color: rgb(5, 5, 8);
+ background-color: var(--couleurFond);
  color: var(--couleurDuTexte);
 }
 
@@ -16,13 +32,24 @@ html{
 	box-sizing: border-box;
 }
 
-header,footer{
-	width: 500px;
+header{
+	width: var(--largeurPremierBloc);
 }
 
-h1,h2{
+aside{
+	width: var(--largeurAside)
+}
+
+h1{
 	color: var(--couleurTitre);
-	font-size: 40px;
+	font-size: var(--fontSizeH1);
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+h2{
+	color: var(--couleurTitre);
+	font-size: var(--fontSizeH2);
 	font-style: italic;
 	margin-bottom: 10px;
 }
@@ -35,7 +62,7 @@ body{
 }
 
 body>*{
-	margin-right: 50px;
+	margin-right: var(--espaceEntreLesBlocs);
 }
 
 .galerie_horizontale{
@@ -59,6 +86,14 @@ body>*{
 	top: calc( var(--margeDeLaPage)* -1 );
 }
 
+figure,video{
+	height: 100%;
+	width: auto;
+}
+
+figcaption{
+	font-style: italic;
+}
 
 
 /* canvas{display: none;} */
